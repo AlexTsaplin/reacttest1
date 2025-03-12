@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
-import TodoList from './components/TodoList.jsx';
-import TodoForm from './components/TodoForm.jsx';
+import TodoList from '../components/TodoList.jsx';
+import TodoForm from '../components/TodoForm.jsx';
+import Comments from "../components/Comment.jsx";
+import '../components/comment.css';
 
-function App() {
+function Page() {
     const [todos, setTodos] = useState([]);
 
     const addTodo = (text) => {
@@ -26,11 +28,9 @@ function App() {
         <div>
             <h1>Todo List</h1>
             <TodoForm onAdd={addTodo} />
-            <TodoList todos={todos} onToggle={toggleTodo} onDelete={deleteTodo} />
+            <TodoList todos={todos} onToggle={toggleTodo} onDelete={deleteTodo} /> <Comments />
         </div>
     );
-
-
 }
 
-export default App;
+export default Page;
