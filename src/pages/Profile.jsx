@@ -1,5 +1,6 @@
 import React from "react";
 import UserProfile from "../components/UserProfile.jsx"; // Імпортуємо UserProfile
+import "./Profile.css";
 
 const Profile = () => {
     return (

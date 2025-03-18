@@ -1,12 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
+import "./userprofile.css";
 
 const UserProfile = ({ name, age, hobby }) => {
     return (
-        <div className="p-4 border rounded-lg shadow-md w-64 bg-white">
-            <h2 className="text-xl font-bold">{name}</h2>
-            {age !== undefined && <p className="text-gray-700">Вік: {age}</p>}
-            {hobby && <p className="text-gray-700">Хобі: {hobby}</p>}
+        <div className="user-profile">
+            <h2>👤 Профіль користувача</h2>
+            <p><span>Ім'я:</span> {name}</p>
+            <p><span>Вік:</span> {age}</p>
+            <p><span>Хобі:</span> {hobby}</p>
         </div>
     );
 };
@@ -22,7 +24,7 @@ const App = () => {
         <div className="flex flex-col gap-4 p-6">
             <UserProfile name="Олександр" age={25} hobby="Гітара" />
             <UserProfile name="Марія" age={27} hobby="Читання" />
-            <UserProfile name="Іван" age={30} />
+            <UserProfile name="Іван" age={30} hobby="Ігри" />
         </div>
     );
 };

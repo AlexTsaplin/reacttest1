@@ -7,7 +7,7 @@ const navItems = [
     { name: "Home", path: "/" },
     { name: "Page", path: "/page" },
     { name: "Profile", path: "/profile" },
-    { name: "Task4", path: "/task4" },
+    { name: "Books", path: "/task4" },
 ];
 
 // Стилі для компонента Layout
